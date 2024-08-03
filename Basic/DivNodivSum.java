@@ -7,6 +7,7 @@ public class DivNodivSum {
                 divSum+=i;
             else
                 nodivSum+=i;
+                
         }
         return Math.abs(nodivSum-divSum);
 
