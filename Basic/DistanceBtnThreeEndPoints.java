@@ -15,5 +15,6 @@ public class DistanceBtnThreeEndPoints {
         float thirdDiff =(float) Math.sqrt (Math.pow (x3 - x1, 2) + Math.pow (y3 - y1, 2));
         System.out.println (firstDiff + secondDiff + thirdDiff);
 
+       
     }
 }

@@ -2,6 +2,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class IsomorphicStringsIMP {
+    public static boolean isomorphicStrings(String str1,String str2){
+        if(str1.length()!=str2.length())return false;
+
+        Map<Character,Character> map=new HashMap<>();
+        for(int i=0;i<str1.length();i++){
+            char ch=str1.charAt(i);
+            if(map.containsKey(ch)){
+                char ch2=map.get(str1.charAt(i));
+                if(str2.charAt(i)!=ch2){
+                    return false;
+                }
+            }else{
+                map.put(str1.charAt(i),str2.charAt(i));
+            }
+        }
+        return true;
+    }
     public static boolean findIS(String s1,String s2){
         HashMap<Character,Character> map=new HashMap<>();
         if(s1.length()!=s2.length())return false;
