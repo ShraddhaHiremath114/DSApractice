@@ -19,7 +19,7 @@ public class CommonInThreeSortedArr{
             }else{
                 if(a[i]<=b[j] && a[i]<=c[k]){
                     i++;
-                }else if(b[j]<=c[k] && b[j]<=c[k]){
+                }else if(b[j]<=a[i] && b[j]<=c[k]){
                     j++;
                 }else{
                     k++;

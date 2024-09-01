@@ -7,14 +7,14 @@ public class PeakElement{
 
     private static int findPeakEle(int[] arr,int n) {
         if(n==1){
-            return 0;
+            return 0;//2
         }
         if(n>1){
-            if(arr[0]>arr[1])return 0;
-            if(arr[n-1]>arr[n-2])return n-1;
+            if(arr[0]>arr[1])return 0;//4 2 3
+            if(arr[n-1]>arr[n-2])return n-1;//1 4 6
         }
         for(int i=1;i<n-1;i++){
-            if(arr[i]>arr[i-1] && arr[i]>arr[i+1])return i;
+            if(arr[i]>arr[i-1] && arr[i]>arr[i+1])return i;//121
         }
         return -1;
     }

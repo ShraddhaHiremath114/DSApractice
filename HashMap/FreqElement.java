@@ -10,6 +10,7 @@ public class FreqElement{
         }
 
         
+        
         for(Map.Entry<Integer,Integer> key:map.entrySet()){
             System.out.println(key.getKey()+"->"+key.getValue());
         }
