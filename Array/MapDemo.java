@@ -16,7 +16,14 @@ public class MapDemo {
                 map.put(arr[i], 1);
             }
         }
-        System.out.println(map);
+        // System.out.println(map);
+
+        for(Map.Entry<Integer,Integer> key:map.entrySet()){
+            System.out.println(key.getKey()+"->"+key.getValue());
+        }
+        for(int i=0;i<map.size();i++){
+            System.out.println(map.get(i));
+        }
         
 
     }

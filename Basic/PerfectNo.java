@@ -11,7 +11,8 @@ class PerfecrNo{
         return false;
     }
     public static void main(String[] args) {
-        int num=1;
+        int num=28
+        ;
         boolean ans=checkPerfectNumber(num);
         System.out.println(ans);
     }
