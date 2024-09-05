@@ -39,12 +39,41 @@ public class SinglyOp{
         temp.next=newnode;
     }
 
+    public void insertAtInd(int data,int ind){
+        Node newnode=new Node(data);
+        Node prev=head;
+        if(ind==0)insertAtBeg(data);
+        int i=1;
+        while (i<ind) {
+            prev=prev.next;
+            i++;
+        }
+        newnode.next=prev.next;
+        prev.next=newnode;
+    }
+
+    public void insertAtPos(int data,int ind){
+        Node newnode=new Node(data);
+        Node prev=head;
+        if(ind==1)insertAtBeg(data);
+        int i=1;
+        while (i<ind-1) {
+            prev=prev.next;
+            i++;
+        }
+        newnode.next=prev.next;
+        prev.next=newnode;
+    }
     public static void main(String[] args) {
         SinglyOp ob=new SinglyOp();
         ob.insertAtBeg(10);
         ob.insertAtBeg(20);
         ob.insertAtBeg(30);
         ob.insertAtEnd(5);
+        ob.insertAtInd(100, 4);
+        ob.insertAtPos(70, 3);
+        ob.insertAtPos(80, 6);
+        ob.insertAtPos(33, 8);
         ob.display();
     }
 }
