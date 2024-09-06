@@ -77,6 +77,23 @@ public class SinglyOp{
         temp.next=null;
         return;
     }
+    public void deleteKey(int key){
+        Node temp=head,prev=null;
+        if(temp!=null && temp.data==key){
+            head=temp.next;
+            return;
+        }
+        while (temp!=null && temp.data!=key) {
+            prev=temp;
+            temp=temp.next;
+            
+
+        }
+        if(temp==null)return;
+        prev.next=temp.next;
+
+    }
+
     public static void main(String[] args) {
         SinglyOp ob=new SinglyOp();
         ob.insertAtBeg(10);
@@ -87,8 +104,9 @@ public class SinglyOp{
         // ob.insertAtPos(70, 3);
         // ob.insertAtPos(80, 6);
         // ob.insertAtPos(33, 8);
-        ob.deleteFirstNode();
-        ob.deleteLast();
+        // ob.deleteFirstNode();
+        // ob.deleteLast();
+        ob.deleteKey(30);
         ob.display();
     }
 }
