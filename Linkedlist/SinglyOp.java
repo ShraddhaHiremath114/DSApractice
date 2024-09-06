@@ -64,16 +64,31 @@ public class SinglyOp{
         newnode.next=prev.next;
         prev.next=newnode;
     }
+
+    public void deleteFirstNode(){
+        head=head.next;
+        return;
+    }
+    public void deleteLast(){
+        Node temp=head;
+        while(temp.next.next!=null){
+            temp=temp.next;
+        }
+        temp.next=null;
+        return;
+    }
     public static void main(String[] args) {
         SinglyOp ob=new SinglyOp();
         ob.insertAtBeg(10);
         ob.insertAtBeg(20);
         ob.insertAtBeg(30);
-        ob.insertAtEnd(5);
-        ob.insertAtInd(100, 4);
-        ob.insertAtPos(70, 3);
-        ob.insertAtPos(80, 6);
-        ob.insertAtPos(33, 8);
+        // ob.insertAtEnd(5);
+        // ob.insertAtInd(100, 4);
+        // ob.insertAtPos(70, 3);
+        // ob.insertAtPos(80, 6);
+        // ob.insertAtPos(33, 8);
+        ob.deleteFirstNode();
+        ob.deleteLast();
         ob.display();
     }
 }
