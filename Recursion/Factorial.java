@@ -1,5 +1,5 @@
 public class Factorial {
-
+//TC- O(n) and Space-O(n)
     public static int  fun(int n){
         if(n==0)return 1;
         return n*fun(n-1);
